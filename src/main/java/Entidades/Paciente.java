@@ -8,7 +8,7 @@ public class Paciente {
     private String apellido;
     private String domicilio;
     private String DNI;
-    private Date fechaAllta;
+    private String fechaAllta;
 
     public Paciente(Long id, String nombre, String apellido, String domicilio, String DNI, Date fechaAllta) {
         this.id = id;
@@ -16,7 +16,11 @@ public class Paciente {
         this.apellido = apellido;
         this.domicilio = domicilio;
         this.DNI = DNI;
-        this.fechaAllta = fechaAllta;
+        this.fechaAllta = String.valueOf(fechaAllta);
+    }
+
+    public Paciente() {
+
     }
 
     public Long getId() {
@@ -59,11 +63,11 @@ public class Paciente {
         this.DNI = DNI;
     }
 
-    public Date getFechaAllta() {
-        return fechaAllta;
+    public java.sql.Date getFechaAllta() {
+        return java.sql.Date.valueOf(fechaAllta);
     }
 
-    public void setFechaAllta(Date fechaAllta) {
+    public void setFechaAllta(String fechaAllta) {
         this.fechaAllta = fechaAllta;
     }
 }

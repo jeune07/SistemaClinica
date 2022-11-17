@@ -12,6 +12,10 @@ public class PacienteService implements Idao{
         this.pacienteIdao = pacienteIdao;
     }
 
+    public PacienteService() {
+
+    }
+
     public Idao<Paciente> getPacienteIdao() {
         return pacienteIdao;
     }
