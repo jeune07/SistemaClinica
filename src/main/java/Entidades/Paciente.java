@@ -1,6 +1,6 @@
 package Entidades;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Paciente {
     private Long id;
@@ -8,15 +8,15 @@ public class Paciente {
     private String apellido;
     private String domicilio;
     private String DNI;
-    private String fechaAllta;
+    private LocalDate fechaAllta;
 
-    public Paciente(Long id, String nombre, String apellido, String domicilio, String DNI, Date fechaAllta) {
+    public Paciente(Long id, String nombre, String apellido, String domicilio, String DNI, LocalDate fechaAllta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.domicilio = domicilio;
         this.DNI = DNI;
-        this.fechaAllta = String.valueOf(fechaAllta);
+        this.fechaAllta =fechaAllta;
     }
 
     public Paciente() {
@@ -67,7 +67,7 @@ public class Paciente {
         return java.sql.Date.valueOf(fechaAllta);
     }
 
-    public void setFechaAllta(String fechaAllta) {
+    public void setFechaAllta(LocalDate fechaAllta) {
         this.fechaAllta = fechaAllta;
     }
 }

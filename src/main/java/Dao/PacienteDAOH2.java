@@ -47,7 +47,7 @@ public class PacienteDAOH2 implements Idao<Paciente> {
                 paciente.setNombre(nombrePaciente);
                 paciente.setApellido(apelllidoPaciente);
                 paciente.setDomicilio(DOmicilioPaciente);
-                paciente.setFechaAllta(String.valueOf(fechaPaciente));
+                paciente.setFechaAllta(fechaPaciente.toLocalDate());
                 paciente.setDNI(dniPaciente);
                 pacientes.add(paciente);
             }

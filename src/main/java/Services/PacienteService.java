@@ -10,9 +10,11 @@ public class PacienteService implements Idao{
 
     public PacienteService(Idao<Paciente> pacienteIdao) {
         this.pacienteIdao = pacienteIdao;
+
     }
 
     public PacienteService() {
+
 
     }
 
@@ -46,6 +48,7 @@ public class PacienteService implements Idao{
 
     @Override
     public void eliminar(Long id) {
+
 
     }
 }
